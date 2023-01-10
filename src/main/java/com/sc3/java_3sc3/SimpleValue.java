@@ -2,9 +2,11 @@ package com.sc3.java_3sc3;
 
 import java.util.function.IntUnaryOperator;
 
+import static com.sc3.java_3sc3.Utils.printSeparator;
+
 public class SimpleValue {
     public static void main(String[] args) {
-        System.out.println("____");
+        printSeparator();
 
         SimpleValue simpleValue = new SimpleValue(2);
         IntUnaryOperator powOf2 = number -> (int) Math.pow(number, 2);
@@ -12,7 +14,7 @@ public class SimpleValue {
         simpleValue.apply(powOf2);
 
         System.out.println("ici la reponse : " + simpleValue.getValue());
-        System.out.println("____");
+        printSeparator();
 
         simpleValue.apply(powOf2);
         System.out.println("ici la reponse : " + simpleValue.getValue());

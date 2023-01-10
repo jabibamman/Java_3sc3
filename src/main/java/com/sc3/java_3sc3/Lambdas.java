@@ -3,20 +3,22 @@ package com.sc3.java_3sc3;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.sc3.java_3sc3.Utils.printSeparator;
+
 public class Lambdas {
     public static void main(String[] args) {
         Lambdas contact = new Lambdas(List.of("Kate", "John", "Bob", "Jessie", "Bill"));
-        System.out.println("____");
+        printSeparator();
 
         // 2 manières de println une liste
         contact.getNames().forEach(System.out::println);
-        System.out.println("____");
+        printSeparator();
         contact.getNames().forEach(name -> System.out.println(name));
 
         // ça marche comme ça aussi mais c'est moins usuel
         //List<String> welcomes = List.of(contact.getNames().stream().map(name -> "Welcome " + name + " !").toArray(String[]::new));
         List<String> welcomes = new ArrayList<>();
-        System.out.println("____");
+        printSeparator();
 
         contact.getNames().stream().map(name -> "Welcome " + name + " !").forEach(welcomes::add);
         welcomes.forEach(System.out::println);
