@@ -27,10 +27,6 @@ public class SimpleValue {
         this.value = value;
     }
 
-    public void apply(SimpleOperation os) {
-        value = os.calculate(value);
-    }
-
     public void apply(IntUnaryOperator os) {
         value = os.applyAsInt(value);
     }
